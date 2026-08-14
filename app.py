@@ -105,7 +105,7 @@ if submitted:
     else:
         st.error(f"**Predicted Default Risk: {risk_pct:.1f}%** — High Risk")
 
-    st.progress(min(proba, 1.0))
+    st.progress(float(min(proba, 1.0)))
     st.caption(
         "This score reflects the model's estimated probability of default "
         "based on historical patterns. It should support, not replace, "
